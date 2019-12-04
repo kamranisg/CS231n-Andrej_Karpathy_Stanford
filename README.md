@@ -35,4 +35,50 @@ What is Data Driven Approach ?
   
   **Classifier 1: K Nearest Neighbor**
   
+ `Dataset: CIFAR 10,
+  Labels : 10,
+  Training Images : 50000,
+  Test Images : 10000`
+  
+  - Approach 1 : Manhatten Distance 
+                 
+     1.Import Dependencies
+      
+         import tensorflow as tf
+         from tensorflow.keras.datasets import cifar10
+         import matplotlib.pyplot as plt
+         import numpy as np
+        
+     2.Load Data
+     
+         (x_train,y_train),(x_test,y_test)=cifar10.load_data()
+        
+     3.Finding 10 closest images
+     
+         a=np.array(x_train.reshape(50000,3072)) #Reshaping training data
+         
+         b=a-np.array(x_test[1].reshape(1,3072)) # Calculating Manhattan Distance from x_test[1](SHIP) with training data
+         
+         c=np.sum(b,axis=1) # Row wise summation
+         
+         index=np.argpartition(c,10) 
+         s=c[index[:10]] # Finding the 10 closest images
+         
+         fig=plt.figure(figsize=(60,60))
+
+         fig.add_subplot(2,12,1)
+         plt.imshow(x_test[1]) # TESI IMAGE
+         
+         for i in range(1,11):
+            fig.add_subplot(2,12,i+1)
+            d=np.where(c==s[i-1])
+            plt.imshow(x_train[d[0]][0])
+     ![Image](Images/ship.png)
+     
+     
+     #### Result 
+     
+     Manhattan distance performs poorly on getting similar images as many inages are wrongly classified here.
+  
+  
   
