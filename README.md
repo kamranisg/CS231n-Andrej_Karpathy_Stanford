@@ -78,7 +78,8 @@ What is Data Driven Approach ?
      
      #### Result 
      
-     Manhattan distance performs poorly on getting similar images as many inages are wrongly classified here.
-  
-  
+     Manhattan distance performs poorly on getting similar images as many images are wrongly classified here.
+     
+     Check my [CIFAR-10-Manhatten.py](https://github.com/kamranisg/CS231n-Andrej_Karpathy_Stanford/blob/master/CIFAR-10-Manhatten.ipynb) code for detailed implementation with some more examples 
+     
   
