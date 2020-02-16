@@ -1,6 +1,9 @@
 # CS-231n Winter 2016 ( Convolutional Neural Networks for Visual Recognition )
 
-[Course-Description](http://cs231n.stanford.edu/)
+![Cat](Images/Cat.jpg)
+
+
+Have a look at [Course-Description](http://cs231n.stanford.edu/)
 
    #### **`Cs-231n encountered its second series in 2016 taught by Prof Lei Fei Fei and Andrej Karpathy at Stanford University.`**
 
